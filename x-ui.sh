@@ -387,49 +387,49 @@ show_xray_status() {
 }
 
 show_usage() {
-    echo "x-ui 管理脚本使用方法: "
+    echo "x-ui Cách sử dụng tập lệnh quản lý: "
     echo "------------------------------------------"
-    echo "x-ui              - 显示管理菜单 (功能更多)"
-    echo "x-ui start        - 启动 x-ui 面板"
-    echo "x-ui stop         - 停止 x-ui 面板"
-    echo "x-ui restart      - 重启 x-ui 面板"
-    echo "x-ui status       - 查看 x-ui 状态"
-    echo "x-ui enable       - 设置 x-ui 开机自启"
-    echo "x-ui disable      - 取消 x-ui 开机自启"
-    echo "x-ui log          - 查看 x-ui 日志"
-    echo "x-ui v2-ui        - 迁移本机器的 v2-ui 账号数据至 x-ui"
-    echo "x-ui update       - 更新 x-ui 面板"
-    echo "x-ui install      - 安装 x-ui 面板"
-    echo "x-ui uninstall    - 卸载 x-ui 面板"
+    echo "x-ui              - Menu quản lý màn hình (nhiều chức năng hơn)"
+    echo "x-ui start        - Khởi chạy bảng điều khiển x-ui"
+    echo "x-ui stop         - Dừng bảng điều khiển x-ui"
+    echo "x-ui restart      - Khởi động lại bảng điều khiển x-ui"
+    echo "x-ui status       - Xem trạng thái x-ui"
+    echo "x-ui enable       - Đặt x-ui để bắt đầu tự động"
+    echo "x-ui disable      - Hủy khởi động x-ui để bắt đầu tự động"
+    echo "x-ui log          - Xem nhật ký x-ui"
+    echo "x-ui v2-ui        - Di chuyển dữ liệu tài khoản v2-ui của máy này sang x-ui"
+    echo "x-ui update       - Cập nhật bảng điều khiển x-ui"
+    echo "x-ui install      - Cài đặt bảng điều khiển x-ui"
+    echo "x-ui uninstall    - Gỡ cài đặt bảng điều khiển x-ui"
     echo "------------------------------------------"
 }
 
 show_menu() {
     echo -e "
-  ${green}x-ui 面板管理脚本${plain}
-  ${green}0.${plain} 退出脚本
+  ${green}x-ui Tập lệnh quản lý bảng điều khiển${plain}
+  ${green}0.${plain} Tập lệnh thoát
 ————————————————
-  ${green}1.${plain} 安装 x-ui
-  ${green}2.${plain} 更新 x-ui
-  ${green}3.${plain} 卸载 x-ui
+  ${green}1.${plain} Cài đặt x-ui
+  ${green}2.${plain} thay mới x-ui
+  ${green}3.${plain} Gỡ cài đặt x-ui
 ————————————————
-  ${green}4.${plain} 重置用户名密码
-  ${green}5.${plain} 重置面板设置
-  ${green}6.${plain} 设置面板端口
+  ${green}4.${plain} Đặt lại tên người dùng và mật khẩu
+  ${green}5.${plain} Đặt lại cài đặt bảng điều khiển
+  ${green}6.${plain} Đặt cổng bảng điều khiển
 ————————————————
-  ${green}7.${plain} 启动 x-ui
-  ${green}8.${plain} 停止 x-ui
-  ${green}9.${plain} 重启 x-ui
- ${green}10.${plain} 查看 x-ui 状态
- ${green}11.${plain} 查看 x-ui 日志
+  ${green}7.${plain} khởi động x-ui
+  ${green}8.${plain} ngừng lại x-ui
+  ${green}9.${plain} Khởi động lại x-ui
+ ${green}10.${plain} Đánh dấu x-ui tiểu bang
+ ${green}11.${plain} Đánh dấu x-ui Nhật ký
 ————————————————
- ${green}12.${plain} 设置 x-ui 开机自启
- ${green}13.${plain} 取消 x-ui 开机自启
+ ${green}12.${plain} Đặt x-ui để bắt đầu tự động
+ ${green}13.${plain} Hủy khởi động x-ui để bắt đầu tự động
 ————————————————
- ${green}14.${plain} 一键安装 bbr (最新内核)
+ ${green}14.${plain} 一Cài Đặt BBR (Tăng Tốc) X-UI
  "
     show_status
-    echo && read -p "请输入选择 [0-14]: " num
+    echo && read -p "Vui lòng nhập lựa chọn [0-14]: " num
 
     case "${num}" in
         0) exit 0
